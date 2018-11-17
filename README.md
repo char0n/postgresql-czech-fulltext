@@ -7,6 +7,10 @@ Docker image with Czech language fulltext search support.
 This work is heavily based on work done by [Tomas Jelen](https://github.com/tjelen) on [tjelen/postgres-tsearch-czech](https://github.com/tjelen/postgres-tsearch-czech).
 Original repository license is included as part of this repository license.
 
+## Dockerhub
+
+[https://hub.docker.com/r/char0n/postgresql-czech-fulltext/](https://hub.docker.com/r/char0n/postgresql-czech-fulltext/)
+
 ## Installation (with docker-compose)
 
 ```yaml
