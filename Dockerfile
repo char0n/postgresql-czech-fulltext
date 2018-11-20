@@ -1,6 +1,6 @@
 FROM postgres:11.1
 
-MAINTAINER Vladimir Gorej <vladimir.gorej@gmail.com>
+MAINTAINER Vladimír Gorej <vladimir.gorej@gmail.com>
 
 COPY ./czech.tar.gz /tmp
 
