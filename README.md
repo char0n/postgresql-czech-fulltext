@@ -17,8 +17,8 @@ Original repository license is included as part of this repository license.
 version: '3'
 services:
   postgres:
-    container_name: postgres-11.9-czech
-    image: char0n/postgresql-czech-fulltext:11.9
+    container_name: postgres-11.10-czech
+    image: char0n/postgresql-czech-fulltext:11.10
     ports:
      - "5432:5432"
     environment:
@@ -48,7 +48,7 @@ You have to run the following `SQL` commands inside your new database to enable 
 Connect to you postgresql database
 
 ```bash
- $ docker exec -it postgres-11.9-czech psql -U postgres -d example_database
+ $ docker exec -it postgres-11.10-czech psql -U postgres -d example_database
 ```
 
 ```sql
@@ -107,6 +107,7 @@ You should see the follwing output:
  - 11.7
  - 11.8
  - 11.9
+ - 11.10
 
 ## Author
 

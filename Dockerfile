@@ -1,4 +1,4 @@
-FROM postgres:11.9
+FROM postgres:11.10
 
 MAINTAINER Vladimír Gorej <vladimir.gorej@gmail.com>
 
