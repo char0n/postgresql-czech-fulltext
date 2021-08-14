@@ -17,8 +17,8 @@ Original repository license is included as part of this repository license.
 version: '3'
 services:
   postgres:
-    container_name: postgres-11.13  -czech
-    image: char0n/postgresql-czech-fulltext:11.13
+    container_name: postgres-13.0-czech
+    image: char0n/postgresql-czech-fulltext:13.0
     ports:
      - "5432:5432"
     environment:
@@ -48,11 +48,11 @@ You have to run the following `SQL` commands inside your new database to enable 
 Connect to you postgresql database
 
 ```bash
- $ docker exec -it postgres-11.13-czech psql -U postgres -d example_database
+ $ docker exec -it postgres-13.0-czech psql -U postgres -d example_database
 ```
 
 ```sql
- example_database=# \df
+ example_database=# \dF
 ```
 
 You should see the following output
@@ -87,7 +87,7 @@ Additional Czech fulltext support verification:
  
 ```
 
-You should see the follwing output:
+You should see the following output:
 
 ```sql
  to_tsvector 
@@ -98,19 +98,7 @@ You should see the follwing output:
 
 ## Postgresql supported versions
 
- - 11.1
- - 11.2
- - 11.3
- - 11.4
- - 11.5
- - 11.6
- - 11.7
- - 11.8
- - 11.9
- - 11.10
- - 11.11
- - 11.12
- - 11.13
+ - 13.0
 
 ## Author
 
