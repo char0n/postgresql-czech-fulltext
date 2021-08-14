@@ -17,7 +17,7 @@ Original repository license is included as part of this repository license.
 version: '3'
 services:
   postgres:
-    container_name: postgres-11.13  -czech
+    container_name: postgres-11.13-czech
     image: char0n/postgresql-czech-fulltext:11.13
     ports:
      - "5432:5432"
@@ -52,7 +52,7 @@ Connect to you postgresql database
 ```
 
 ```sql
- example_database=# \df
+ example_database=# \dF
 ```
 
 You should see the following output
@@ -87,7 +87,7 @@ Additional Czech fulltext support verification:
  
 ```
 
-You should see the follwing output:
+You should see the following output:
 
 ```sql
  to_tsvector 
