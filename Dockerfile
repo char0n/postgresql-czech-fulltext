@@ -1,4 +1,4 @@
-FROM postgres:14.0
+FROM postgres:14.1
 
 MAINTAINER Vladimír Gorej <vladimir.gorej@gmail.com>
 
