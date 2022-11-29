@@ -15,11 +15,14 @@ jobs:
     steps:
       - name: Get tag name
         id: get_tag_name
-        run: echo "VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_OUTPUT
+        run: |
+          echo "GIT_TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_OUTPUT
+          dockerTag=`echo ${GITHUB_REF/refs\/tags\//} | cut -c 2-`
+          echo "DOCKER_TAG=$dockerTag" >> $GITHUB_OUTPUT
 
       - uses: actions/checkout@v3
         with:
-          ref: ${{ steps.get_tag_name.outputs.VERSION }}
+          ref: ${{ steps.get_tag_name.outputs.GIT_TAG }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
@@ -38,5 +41,5 @@ jobs:
         with:
           context: .
           push: false
-          platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8,linux/386,linux/ppc64le,linux/s390x
-          tags: swaggerapi/swagger-editor:${{ steps.get_tag_name.outputs.VERSION }}
+          platforms: linux/amd64,linux/arm/v5,linux/arm/v7,linux/arm64/v8,linux/386,linux/mips64le,linux/ppc64le,linux/s390x
+          tags: char0n/postgresql-czech-fulltext:${{ steps.get_tag_name.outputs.DOCKER_TAG }}
