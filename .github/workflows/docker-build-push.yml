@@ -9,7 +9,6 @@ on:
 jobs:
 
   build-push:
-    if: github.event.workflow_run.conclusion == 'success'
     name: Build & Push SwaggerEditor@next Docker image
     runs-on: ubuntu-latest
 
