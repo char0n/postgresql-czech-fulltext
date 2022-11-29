@@ -17,8 +17,8 @@ Original repository license is included as part of this repository license.
 version: '3'
 services:
   postgres:
-    container_name: postgres-15rc1-czech
-    image: char0n/postgresql-czech-fulltext:15rc1
+    container_name: postgres-15rc2-czech
+    image: char0n/postgresql-czech-fulltext:15rc2
     ports:
      - "5432:5432"
     environment:
@@ -48,7 +48,7 @@ You have to run the following `SQL` commands inside your new database to enable 
 Connect to you postgresql database
 
 ```bash
- $ docker exec -it postgres-15rc1-czech psql -U postgres -d example_database
+ $ docker exec -it postgres-15rc2-czech psql -U postgres -d example_database
 ```
 
 ```sql
@@ -103,6 +103,7 @@ You should see the following output:
 - 15 Beta 3
 - 15 Beta 4
 - 15 RC 1
+- 15 RC 2
 - [14.x](https://github.com/char0n/postgresql-czech-fulltext/tree/v14)
 - [13.x](https://github.com/char0n/postgresql-czech-fulltext/tree/v13)
 - [12.x](https://github.com/char0n/postgresql-czech-fulltext/tree/v12)
