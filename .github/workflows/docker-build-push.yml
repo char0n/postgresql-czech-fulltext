@@ -40,5 +40,5 @@ jobs:
         with:
           context: .
           push: true
-          platforms: linux/amd64,linux/arm/v5,linux/arm/v7,linux/arm64/v8,linux/386,linux/mips64le,linux/ppc64le,linux/s390x
+          platforms: linux/amd64,linux/arm/v5,linux/arm/v7,linux/arm64/v8,linux/386
           tags: char0n/postgresql-czech-fulltext:${{ steps.get_tag_name.outputs.DOCKER_TAG }}
